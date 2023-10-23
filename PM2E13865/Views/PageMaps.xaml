@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2E13865.Views.PageMaps">
+
+    <Grid BackgroundColor="Azure">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <maps:Map x:Name="mapa" 
+                  Grid.Row="0" 
+                  Grid.Column="0"
+                  IsShowingUser="True"
+                  />
+
+        <StackLayout Grid.Row="1"
+                     Grid.Column="0"
+                     >
+
+
+            <Grid>
+                <Frame Background="White" Padding="0,0,0,0">
+
+                    <Image Source="LOGOU.png"
+                            Aspect="AspectFit"
+                            WidthRequest="110"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                           
+               />
+
+                </Frame>
+                <Label Text="SITE VISITOR APP"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                />
+
+            </Grid>
+            <Button x:Name="btnShare"
+                    Text="Compartir imagen de ubicacion"
+                    Clicked="btnShare_Clicked"
+                    WidthRequest="400"
+                    HeightRequest="50"
+                    BorderWidth="2"
+                    Background="White"
+                    BorderColor="DarkCyan"
+                    CornerRadius="10"
+                    Margin="30,0,30,0"
+                    TextColor="Black"
+                    />
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

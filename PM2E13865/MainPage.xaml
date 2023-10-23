@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E13865.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Azure">
+
+    <ScrollView>
+        <StackLayout>
+
+            <Grid>
+                <Frame Background="White" Padding="0,0,0,0">
+                    
+                    <Image Source="LOGOU.png"
+                            Aspect="AspectFit"
+                            WidthRequest="110"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                           
+               />
+                    
+                </Frame>
+                <Label Text="SITE VISITOR APP"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                />
+
+            </Grid>
+
+            <StackLayout>
+
+                <Frame Background="DarkCyan">
+                    <Label Text="IMAGEN DEL SITIO VISITADO"
+                           HorizontalOptions="Center"
+                           TextColor="LightGoldenrodYellow"
+                           
+                   />
+                </Frame>
+
+                <Image x:Name="imgFoto" 
+                       Source="ImagenFondo.png" 
+                       Aspect="AspectFit" 
+                       HorizontalOptions="Center" 
+                       WidthRequest="300" 
+                       HeightRequest="220">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                              NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+
+                </Image>
+                
+
+                <Label Text="Presiona la Imagen para tomar la foto!!"
+                       HorizontalOptions="Center"
+                       TextColor="Black"
+                   />
+
+            </StackLayout>
+
+            <Label Text="Latitud:" 
+                   Margin="30,30,0,0" 
+                   HorizontalOptions="StartAndExpand" 
+                   FontSize="20"
+                   TextColor="Black"/>
+
+            <Entry x:Name="txtLatitud" 
+                   Keyboard="Numeric" 
+                   Placeholder="Ejemplo: 48.85" 
+                   HorizontalOptions="FillAndExpand" 
+                   Margin="30,0,30,0" 
+                   IsEnabled="False"
+                   TextColor="Black"/>
+
+            <Label Text="Longitud:" 
+                   Margin="30,30,0,0"
+                   HorizontalOptions="StartAndExpand" 
+                   FontSize="20"
+                   TextColor="Black"/>
+
+            <Entry x:Name="txtLongitud"
+                   Keyboard="Numeric"
+                   Placeholder="Ejemplo: 2.34"
+                   HorizontalOptions="FillAndExpand" 
+                   Margin="30,0,30,0"
+                   IsEnabled="False"
+                   TextColor="Black"
+                   />
+
+            <Label Text="Descripcion:" 
+                   Margin="30,30,0,0"
+                   HorizontalOptions="StartAndExpand" 
+                   FontSize="20"
+                   TextColor="Black"/>
+
+            <Editor x:Name="txtDescription"
+                    Keyboard="Text"
+                    AutoSize="TextChanges"
+                    MaxLength="50"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="30,0,30,0"
+                    Placeholder="Paris,Francia"
+                    TextColor="Gray"
+                    />
+
+
+            <Grid Margin="10,30,30,0" Padding="5,-5,0,15">
+                <Button x:Name="btnAdd"
+                        Text="Agregar"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Column="0"
+                        Clicked="btnAdd_Clicked"
+                        Background="white"
+                        BorderWidth="2"
+                        BorderColor="DarkCyan"
+                        TextColor="Black"
+                        />
+
+                <Button x:Name="btnList"
+                        Text="Lista Sitios"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Column="1"
+                        Clicked="btnList_Clicked"
+                        Background="white"
+                        BorderWidth="2"
+                        BorderColor="DarkCyan"
+                        TextColor="Black"
+                            />
+            </Grid>
+
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

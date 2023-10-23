@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E13865.Views.PageList"
+             BackgroundColor="Azure">
+    
+   
+
+        <Grid Margin="30,5,30,5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+
+            <Grid>
+                <Frame Background="White" Padding="0,0,0,0">
+
+                    <Image Source="LOGOU.png"
+                            Aspect="AspectFit"
+                            WidthRequest="110"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="Center"
+                           
+               />
+
+                </Frame>
+                <Label Text="SITE VISITOR APP"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                />
+
+            </Grid>
+
+            <ListView x:Name="listaSites" 
+                      ItemTapped="listaSites_ItemTapped">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                            <Grid >
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="ImagenFondo.png"
+                                       Grid.Column="0"/>
+
+                                    <Label Grid.Column="1" 
+                                           Text="{Binding descripcion}"
+                                           VerticalOptions="Center"
+                                           TextColor="Black"
+                                       />
+
+                                </Grid>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1">
+
+            <Grid Margin="10,30,30,0" Padding="5,-5,0,15">
+                    <Button x:Name="btnEliminar"
+                            Text="Eliminar Sitio"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="0"
+                            Clicked="btnEliminar_Clicked"
+                            Background="white"
+                            BorderWidth="2"
+                            BorderColor="DarkCyan"       
+                            TextColor="Black"
+                            />
+                
+                <Button x:Name="btnMirarMapa"
+                        Text="Ver Mapa"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Column="1"
+                        Clicked="btnMirarMapa_Clicked"
+                        Background="white"
+                        BorderWidth="2"
+                        BorderColor="DarkCyan"
+                        TextColor="Black"
+                            />
+                </Grid>
+
+            </StackLayout>
+        </Grid>
+
+    
+</ContentPage>
