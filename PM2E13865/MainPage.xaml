@@ -30,7 +30,7 @@
 
             <StackLayout>
 
-                <Frame Background="DarkCyan">
+                <Frame Background="#B9E4F3 ">
                     <Label Text="IMAGEN DEL SITIO VISITADO"
                            HorizontalOptions="Center"
                            TextColor="LightGoldenrodYellow"
@@ -82,7 +82,7 @@
 
             <Entry x:Name="txtLongitud"
                    Keyboard="Numeric"
-                   Placeholder="Ejemplo: 2.34"
+                   Placeholder="Ejemplo: 3.40"
                    HorizontalOptions="FillAndExpand" 
                    Margin="30,0,30,0"
                    IsEnabled="False"
@@ -101,7 +101,7 @@
                     MaxLength="50"
                     HorizontalOptions="FillAndExpand"
                     Margin="30,0,30,0"
-                    Placeholder="Paris,Francia"
+                    Placeholder="Pais"
                     TextColor="Gray"
                     />
 
@@ -112,7 +112,7 @@
                         HorizontalOptions="FillAndExpand"
                         Grid.Column="0"
                         Clicked="btnAdd_Clicked"
-                        Background="white"
+                        Background="#B9E4F3 "
                         BorderWidth="2"
                         BorderColor="DarkCyan"
                         TextColor="Black"
@@ -123,7 +123,7 @@
                         HorizontalOptions="FillAndExpand"
                         Grid.Column="1"
                         Clicked="btnList_Clicked"
-                        Background="white"
+                        Background="#B9E4F3 "
                         BorderWidth="2"
                         BorderColor="DarkCyan"
                         TextColor="Black"
